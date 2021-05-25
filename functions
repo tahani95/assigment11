@@ -1,0 +1,99 @@
+const message = 'hello';
+foo();
+
+function foo() {
+	alert(message);
+}
+//the code will run and output is "hello" cause  we call the function in our code first, before the function is written"hoisted function"
+==========================================
+const message = 'hello';
+foo(message);
+
+function foo() {
+	let message = 'hi'
+	alert(message);
+}
+//the code will run and output "hi" cause the function depend on local variable inside when we identify message on function consider it another one so alert hi.
+==========================================
+foo();
+
+const message = 'hello';
+
+function foo() {
+	alert(message);
+}
+//the code won`t run cause we declare variable after calling function when calling read code inside function cant find variable message.
+===========================================
+foo();
+
+function foo() {
+	alert(message);
+}
+
+var message = 'hello';
+//the code will run but return undefined cause according what i noticed when we use var insted of let, the function identify the variable but cant identify value of variable.
+========================================
+if (true) {
+	let message = 'hello';
+}
+
+alert(message);
+//the code won`t run cause the variable"message" at scope of if so the coding consider it as local variable and can`t find it at global.
+========================================
+if (true) {
+	var message = 'hello';
+}
+
+alert(message);
+//the code will run and output is "hello" cause when we use var consider everywhere is global.
+========================================
+{
+	let message = 'hello';
+	message = 'hi';
+}
+
+alert(message);
+// the same i said above when we declare variable at scope local the coding can`t find the variable.
+=====================================
+let message = 'hello';
+
+{
+	message = 'hi';
+}
+
+alert(message);
+//the code will run and output is "hi" cause we declare variable at global ..when we declare variable at global the codeing can access this value every where but when we declare variable at local the coding can access just at local.
+======================================
+foo();
+
+function foo() {
+	{
+		const message = 'hello';
+	}
+	
+	alert(message);
+}
+//the code won`t run cause variable "message"at scope inner .
+===================================
+foo();
+
+function foo() {
+	{
+		var message = 'hello';
+	}
+	
+	alert(message);
+}
+//the code will run and output is "hello" cause the var word defferint way from let the coding access to variable even if it iat scope.
+===============================
+foo();
+
+function foo() {
+	{
+		var message = 'hello';
+	}
+}
+
+alert(message);
+
+ 
